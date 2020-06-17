@@ -10,7 +10,6 @@ services:
         - X_LEGACY_GD_LIB
     image: ${PHP_IMAGE_NAME}:${PHP_BASE_IMAGE_VERSION}${PHP_IMAGE_VERSION_SUFFIX}
     environment:
-      - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
       - PHP_ENABLE_XDEBUG
       - TEST_RUNTIME_PATH=/tmp/runtime
     volumes:
@@ -19,19 +18,22 @@ services:
       - ./_host-volumes/yii2:/yii2:delegated
       # Application testing
       - ./_host-volumes/app:/app:delegated
+      # SSL
+      - ./docker/nginx/ssl:/etc/nginx/ssl
       # Composer cache
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
   mysql:
     image: mysql:5.7.22
-    command: --default-authentication-plugin=mysql_native_password
-    restart: unless-stopped
-    tty: true
+    restart: always
     environment:
-      MYSQL_DATABASE: paradam
       MYSQL_ROOT_PASSWORD: root
-    volumes:
-       - ./database:/var/lib/mysql
-       - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
+      MYSQL_DATABASE: paradam
+      MYSQL_USER: splaa
+      MYSQL_PASSWORD: splaa1977
+    ports:
+      - 3306:3306
+
+
   adminer:
     image: adminer
     restart: always
