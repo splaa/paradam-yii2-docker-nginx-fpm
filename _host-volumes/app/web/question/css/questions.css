@@ -1,0 +1,14 @@
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 14px;
+    width: 300px;
+}
+
+.submit {
+    width: 110px;
+    background-color: #FF6;
+    padding: 3px;
+    border: 1px solid #FC0;
+    margin-top: 20px;
+}

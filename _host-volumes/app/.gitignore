@@ -1,0 +1,70 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Composer template
+composer.phar
+/vendor/
+
+# IntelliJ project files
+../../../paradam.splx.site/.idea
+*.iml
+out
+gen
+
+
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+.htaccess
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+#phpunit.phar
+# local phpunit config
+phpunit.xml
+
+../yii2-doc-fm-74/_host-volumes/app/tests/_output/*
+../yii2-doc-fm-74/_host-volumes/app/tests/_support/_generated
+
+#vagrant folder
+/.vagrant
+
+
+../yii2-doc-fm-74/_host-volumes/app/runtime/*
+!../yii2-doc-fm-74/_host-volumes/app/runtime/.gitkeep
+
+../yii2-doc-fm-74/_host-volumes/app/web/assets/*
+!../yii2-doc-fm-74/_host-volumes/app/web/assets/.gitkeep
+
+/web/MadelineProto.log
+
+/MadelineProto.log
+
+.phpunit.result.cache
+
+
+../yii2-doc-fm-74/_host-volumes/app/web/images/user/avatar/*
+!../yii2-doc-fm-74/_host-volumes/app/web/images/user/avatar/.gitkeep
+
+database/*
+!database/.gitkeep
+
+../yii2-doc-fm-74/_host-volumes/app/web/uploads/*
+!../yii2-doc-fm-74/_host-volumes/app/web/uploads/.gitkeep
+
+composer.lock
+
+/_host-volumes/app/web/images/services/uploads/*
+!/_host-volumes/app/web/images/services/uploads/.gitkeep
+!/_host-volumes/app/web/images/services/uploads/no-image.png

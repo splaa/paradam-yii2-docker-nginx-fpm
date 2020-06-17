@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="unckecked" transform="translate(-16 -680)">
+    <g id="Rectangle_23" data-name="Rectangle 23" transform="translate(16 680)" fill="#cbcbcb" stroke="#cbcbcb" stroke-width="3">
+      <rect width="20" height="20" rx="10" stroke="none"/>
+      <rect x="1.5" y="1.5" width="17" height="17" rx="8.5" fill="none"/>
+    </g>
+    <path id="tick" d="M.592,5.828a.52.52,0,0,0,.057.734l2.567,2.2a.517.517,0,0,0,.338.125l.046,0A.518.518,0,0,0,3.957,8.7L8.348,3.353a.521.521,0,0,0-.072-.733l-.8-.66a.521.521,0,0,0-.732.072L3.36,6.145,2,4.982a.522.522,0,0,0-.734.057Z" transform="translate(21.534 685.158)" fill="#fff"/>
+  </g>
+</svg>

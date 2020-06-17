@@ -1,0 +1,7 @@
+/index.php
+/index-test.php
+/images/user/avatar/*
+!/images/user/avatar/.gitkeep
+!/images/user/avatar/none.png
+/uploads/*
+!/uploads/.gitkeep
