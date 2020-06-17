@@ -1,0 +1,115 @@
+2020-06-17 20:08:37 [10.211.55.2][-][fa7346b514f4a6038eece3845f347aed][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: user in /app/vendor/yiisoft/yii2/db/ActiveRecord.php:438
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#4 /app/modules/user/models/User.php(385): yii\db\BaseActiveRecord::findOne(Array)
+#5 /app/modules/user/forms/PhoneLoginForm.php(89): app\modules\user\models\User::findByPhone('+380686987691')
+#6 /app/modules/user/forms/PhoneLoginForm.php(57): app\modules\user\forms\PhoneLoginForm->getUser()
+#7 [internal function]: app\modules\user\forms\PhoneLoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#8 /app/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#9 /app/vendor/yiisoft/yii2/validators/Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(app\modules\user\forms\PhoneLoginForm), 'password')
+#10 /app/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\modules\user\forms\PhoneLoginForm), Array)
+#11 /app/modules/user/forms/PhoneLoginForm.php(75): yii\base\Model->validate()
+#12 /app/modules/user/controllers/DefaultController.php(50): app\modules\user\forms\PhoneLoginForm->login()
+#13 [internal function]: app\modules\user\controllers\DefaultController->actionLogin()
+#14 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /app/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#17 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/default/lo...', Array)
+#18 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /app/web/index.php(17): yii\base\Application->run()
+#20 {main}
+2020-06-17 20:08:37 [10.211.55.2][-][fa7346b514f4a6038eece3845f347aed][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'YFKrNGYt50iORk-o3bLITENBgLsTICHVZ2r8NVr9oV9ZDeRVIkugfPcuC-OogophIHXu01INGec9C4xwEYjzPg=='
+    'PhoneLoginForm' => [
+        'phone' => '+380686987691'
+        'password' => 'splaa1977'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fa7346b514f4a6038eece3845f347aed'
+    'XDEBUG_SESSION' => 'XDEBUG_ECLIPSE'
+    'adminer_key' => '4bd159c6ec9e3dfc500d0ebcabeebbd9'
+    'adminer_sid' => 'd0f1ca3dbd11d8ecce8fe2484915aef7'
+    '_csrf' => '1e668f061b0fd856ff5f4f45c7b442be3e96bc2b0eff9fb41819436b56c1dde7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9_OaDfG4yhDKu0B-c4nhA-82ZapEKuRa\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://dev.loc:8100/'
+]
+
+$_SERVER = [
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi'
+    'HOSTNAME' => '4bb8d9bfcebc'
+    'PHP_INI_DIR' => '/usr/local/etc/php'
+    'HOME' => '/var/www'
+    'PS1' => '\\e[0;35mphd \\e[0;37m\\u container \\h \\e[0;32m\\w \\e[0;0m\\n$ '
+    'PHP_LDFLAGS' => '-Wl,-O1 -pie'
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_MD5' => ''
+    'VERSION_XDEBUG' => '2.8.1'
+    'TEST_RUNTIME_PATH' => '/tmp/runtime'
+    'PHP_VERSION' => '7.4.6'
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.7'
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312'
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64'
+    'PHP_ASC_URL' => 'https://www.php.net/distributions/php-7.4.6.tar.xz.asc'
+    'COMPOSER_ALLOW_SUPERUSER' => '1'
+    'PHP_URL' => 'https://www.php.net/distributions/php-7.4.6.tar.xz'
+    'PHP_USER_ID' => '33'
+    'TERM' => 'linux'
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'DEBIAN_FRONTEND' => 'noninteractive'
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c'
+    'PWD' => '/app'
+    'PHP_SHA256' => 'd740322f84f63019622b9f369d64ea5ab676547d2bdcf12be77a5a4cffd06832'
+    'PHP_ENABLE_XDEBUG' => '0'
+    'USER' => 'www-data'
+    'HTTP_COOKIE' => 'PHPSESSID=fa7346b514f4a6038eece3845f347aed; XDEBUG_SESSION=XDEBUG_ECLIPSE; adminer_key=4bd159c6ec9e3dfc500d0ebcabeebbd9; adminer_sid=d0f1ca3dbd11d8ecce8fe2484915aef7; _csrf=1e668f061b0fd856ff5f4f45c7b442be3e96bc2b0eff9fb41819436b56c1dde7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229_OaDfG4yhDKu0B-c4nhA-82ZapEKuRa%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,uk;q=0.6,pl;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://dev.loc:8100/user/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://dev.loc:8100'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONTENT_LENGTH' => '193'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'dev.loc:8100'
+    'SCRIPT_FILENAME' => '/app/web//index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'app'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.112.3'
+    'REMOTE_PORT' => '49766'
+    'REMOTE_ADDR' => '10.211.55.2'
+    'SERVER_SOFTWARE' => 'nginx/1.9.15'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/user/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '193'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1592424517.4881
+    'REQUEST_TIME' => 1592424517
+    'argv' => []
+    'argc' => 0
+]
