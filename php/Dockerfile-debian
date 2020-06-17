@@ -42,9 +42,7 @@ RUN apt-get update && \
 ARG X_LEGACY_GD_LIB=0
 RUN if [ $X_LEGACY_GD_LIB = 1 ]; then \
         docker-php-ext-configure gd \
-                --with-freetype-dir=/usr/include/ \
-                --with-png-dir=/usr/include/ \
-                --with-jpeg-dir=/usr/include/; \
+                --with-freetype=/usr/include/ --with-jpeg=/usr/include/; \
     else \
         docker-php-ext-configure gd \
                 --with-freetype=/usr/include/ \
