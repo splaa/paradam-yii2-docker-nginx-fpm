@@ -46,3 +46,15 @@ services:
       - "9503"
     ports:
       - "9503:9503"
+
+
+#  composer
+  api-php-cli:
+    build:
+      context: ./docker/php-cli/
+      dockerfile: php-cli.Dockerfile
+    volumes:
+      - ./api:/var/www/api
+    working_dir: /var/www/api
+    tty: true
+
